@@ -10,7 +10,9 @@
 
 enum KMNErrorCode {
     KMNErrorCodeUnknownError, /**< If no expected error is generated during retrieval but the asset is still nil  */
-    KMNErrorCodeUnexpectedResponseCode
+    KMNErrorCodeUnexpectedResponseCode,
+    KMNErrorCodeUnexpectedResponseFormat
+
 };
 
 static NSString *const KMNErrorDomain = @"com.travelex.networking.error";
