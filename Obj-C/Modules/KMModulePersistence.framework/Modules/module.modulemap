@@ -1,0 +1,6 @@
+framework module KMModulePersistence {
+  umbrella header "KMModulePersistence.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="KMPSingleEntityTest" representedClassName="KMPSingleEntityTest" syncable="YES">
+        <attribute name="boolProperty" optional="YES" attributeType="Boolean" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="boolProperty"/>
+            </userInfo>
+        </attribute>
+        <attribute name="dataProperty" optional="YES" attributeType="Binary" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="dataProperty"/>
+            </userInfo>
+        </attribute>
+        <attribute name="dateFormatProperty" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="dateFormat" value="yyyy-MM-dd'T'hh:mm:ssZ"/>
+                <entry key="jsonKey" value="dateFormatProperty"/>
+            </userInfo>
+        </attribute>
+        <attribute name="dateNowProperty" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="autoValue" value="now"/>
+            </userInfo>
+        </attribute>
+        <attribute name="decimalProperty" optional="YES" attributeType="Decimal" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="decimalProperty"/>
+            </userInfo>
+        </attribute>
+        <attribute name="doubleProperty" optional="YES" attributeType="Double" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="doubleProperty"/>
+            </userInfo>
+        </attribute>
+        <attribute name="floatProperty" optional="YES" attributeType="Float" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="floatProperty"/>
+            </userInfo>
+        </attribute>
+        <attribute name="int16Property" optional="YES" attributeType="Integer 16" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="int16Property"/>
+            </userInfo>
+        </attribute>
+        <attribute name="int32Property" optional="YES" attributeType="Integer 32" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="int32Property"/>
+            </userInfo>
+        </attribute>
+        <attribute name="int64Property" optional="YES" attributeType="Integer 64" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="int64Property"/>
+            </userInfo>
+        </attribute>
+        <attribute name="stringProperty" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="stringProperty"/>
+            </userInfo>
+        </attribute>
+        <attribute name="transformableProperty" optional="YES" attributeType="Transformable" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="transformableProperty"/>
+            </userInfo>
+        </attribute>
+        <attribute name="uniqueProperty" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="uniqueProperty"/>
+            </userInfo>
+        </attribute>
+        <userInfo>
+            <entry key="uniqueAttribute" value="uniqueProperty"/>
+        </userInfo>
+    </entity>
+    <elements>
+        <element name="KMPSingleEntityTest" positionX="-63" positionY="-18" width="128" height="240"/>
+    </elements>
+</model>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="KMPManyToManyTest" representedClassName="KMPManyToManyTest" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="manyToManyId" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="id"/>
+            </userInfo>
+        </attribute>
+        <relationship name="topLevels" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KMPTopLevelTest" inverseName="manyToManys" inverseEntity="KMPTopLevelTest" syncable="YES"/>
+        <userInfo>
+            <entry key="uniqueAttribute" value="manyToManyId"/>
+        </userInfo>
+    </entity>
+    <entity name="KMPManyToOneTest" representedClassName="KMPManyToOneTest" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="manyToOneId" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="id"/>
+            </userInfo>
+        </attribute>
+        <relationship name="topLevel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="KMPTopLevelTest" inverseName="manyToOnes" inverseEntity="KMPTopLevelTest" syncable="YES"/>
+        <userInfo>
+            <entry key="uniqueAttribute" value="manyToOneId"/>
+        </userInfo>
+    </entity>
+    <entity name="KMPOneToManyTest" representedClassName="KMPOneToManyTest" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="oneToManyId" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="id"/>
+            </userInfo>
+        </attribute>
+        <relationship name="topLevels" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KMPTopLevelTest" inverseName="oneToMany" inverseEntity="KMPTopLevelTest" syncable="YES"/>
+        <userInfo>
+            <entry key="uniqueAttribute" value="oneToManyId"/>
+        </userInfo>
+    </entity>
+    <entity name="KMPOneToOneTest" representedClassName="KMPOneToOneTest" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="oneToOneId" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="id"/>
+            </userInfo>
+        </attribute>
+        <relationship name="secondLevel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="KMPSecondLevelDeepTest" inverseName="oneToOne" inverseEntity="KMPSecondLevelDeepTest" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="secondLevel"/>
+            </userInfo>
+        </relationship>
+        <relationship name="topLevel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="KMPTopLevelTest" inverseName="oneToOne" inverseEntity="KMPTopLevelTest" syncable="YES"/>
+        <userInfo>
+            <entry key="uniqueAttribute" value="oneToOneId"/>
+        </userInfo>
+    </entity>
+    <entity name="KMPSecondLevelDeepTest" representedClassName="KMPSecondLevelDeepTest" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="secondLevelDeepId" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="id"/>
+            </userInfo>
+        </attribute>
+        <relationship name="oneToOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="KMPOneToOneTest" inverseName="secondLevel" inverseEntity="KMPOneToOneTest" syncable="YES"/>
+        <userInfo>
+            <entry key="uniqueAttribute" value="secondLevelDeepId"/>
+        </userInfo>
+    </entity>
+    <entity name="KMPTopLevelTest" representedClassName="KMPTopLevelTest" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="topLevelId" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="id"/>
+            </userInfo>
+        </attribute>
+        <relationship name="manyToManys" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KMPManyToManyTest" inverseName="topLevels" inverseEntity="KMPManyToManyTest" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="manyToMany"/>
+            </userInfo>
+        </relationship>
+        <relationship name="manyToOnes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KMPManyToOneTest" inverseName="topLevel" inverseEntity="KMPManyToOneTest" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="manyToOne"/>
+            </userInfo>
+        </relationship>
+        <relationship name="oneToMany" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="KMPOneToManyTest" inverseName="topLevels" inverseEntity="KMPOneToManyTest" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="oneToMany"/>
+            </userInfo>
+        </relationship>
+        <relationship name="oneToOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="KMPOneToOneTest" inverseName="topLevel" inverseEntity="KMPOneToOneTest" syncable="YES">
+            <userInfo>
+                <entry key="jsonKey" value="oneToOne"/>
+            </userInfo>
+        </relationship>
+        <userInfo>
+            <entry key="uniqueAttribute" value="topLevelId"/>
+        </userInfo>
+    </entity>
+    <elements>
+        <element name="KMPManyToManyTest" positionX="-18" positionY="-324" width="128" height="90"/>
+        <element name="KMPManyToOneTest" positionX="-252" positionY="-135" width="128" height="88"/>
+        <element name="KMPOneToManyTest" positionX="196" positionY="-148" width="128" height="90"/>
+        <element name="KMPOneToOneTest" positionX="-18" positionY="-13" width="128" height="105"/>
+        <element name="KMPSecondLevelDeepTest" positionX="-27" positionY="125" width="144" height="90"/>
+        <element name="KMPTopLevelTest" positionX="-20" positionY="-180" width="128" height="135"/>
+    </elements>
+</model>

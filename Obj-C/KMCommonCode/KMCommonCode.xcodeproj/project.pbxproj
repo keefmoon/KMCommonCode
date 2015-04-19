@@ -1,0 +1,926 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2F089BC51A104C8F006A2EC0 /* KMCommonCode Frameworks */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2F089BC61A104C8F006A2EC0 /* Build configuration list for PBXAggregateTarget "KMCommonCode Frameworks" */;
+			buildPhases = (
+			);
+			dependencies = (
+				2F089C021A104DF0006A2EC0 /* PBXTargetDependency */,
+				2F089BF41A104D0B006A2EC0 /* PBXTargetDependency */,
+				2F089BF61A104D19006A2EC0 /* PBXTargetDependency */,
+				2F089BF81A104D1F006A2EC0 /* PBXTargetDependency */,
+				2F089BFA1A104D25006A2EC0 /* PBXTargetDependency */,
+			);
+			name = "KMCommonCode Frameworks";
+			productName = "KMCommonCode Frameworks";
+		};
+		2F089BFB1A104DB7006A2EC0 /* KMCommonCode MoGenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2F089BFC1A104DB7006A2EC0 /* Build configuration list for PBXAggregateTarget "KMCommonCode MoGenerator" */;
+			buildPhases = (
+			);
+			dependencies = (
+				2F089C001A104DCC006A2EC0 /* PBXTargetDependency */,
+				2F089C4C1A105C0E006A2EC0 /* PBXTargetDependency */,
+			);
+			name = "KMCommonCode MoGenerator";
+			productName = "KMCommonCode MoGenerator";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2F089B9E1A104A75006A2EC0 /* KMCommonCodeExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089B9D1A104A75006A2EC0 /* KMCommonCodeExampleTests.m */; };
+		2F089BB21A104B81006A2EC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089BB11A104B81006A2EC0 /* AppDelegate.m */; };
+		2F089BB51A104B89006A2EC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089BB41A104B89006A2EC0 /* ViewController.m */; };
+		2F089BB71A104BA0006A2EC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F089BB61A104BA0006A2EC0 /* Images.xcassets */; };
+		2F089BC31A104BCE006A2EC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089BC11A104BCE006A2EC0 /* main.m */; };
+		2F089C081A104F0F006A2EC0 /* KMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C041A104F0F006A2EC0 /* KMCore.framework */; };
+		2F089C091A104F0F006A2EC0 /* KMNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C051A104F0F006A2EC0 /* KMNetworking.framework */; };
+		2F089C0A1A104F0F006A2EC0 /* KMParseSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C061A104F0F006A2EC0 /* KMParseSync.framework */; };
+		2F089C0B1A104F0F006A2EC0 /* KMPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C071A104F0F006A2EC0 /* KMPersistence.framework */; };
+		2F089C101A104F33006A2EC0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C0D1A104F33006A2EC0 /* Bolts.framework */; };
+		2F089C111A104F33006A2EC0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C0E1A104F33006A2EC0 /* Parse.framework */; };
+		2F089C121A104F33006A2EC0 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C0F1A104F33006A2EC0 /* ParseFacebookUtils.framework */; };
+		2F089C2F1A1057B5006A2EC0 /* KMParseSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C061A104F0F006A2EC0 /* KMParseSync.framework */; };
+		2F089C301A1057BD006A2EC0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C0D1A104F33006A2EC0 /* Bolts.framework */; };
+		2F089C311A1057BD006A2EC0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C0E1A104F33006A2EC0 /* Parse.framework */; };
+		2F089C321A1057BD006A2EC0 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C0F1A104F33006A2EC0 /* ParseFacebookUtils.framework */; };
+		2F089C331A1057D0006A2EC0 /* KMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C041A104F0F006A2EC0 /* KMCore.framework */; };
+		2F089C341A1057D0006A2EC0 /* KMNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C051A104F0F006A2EC0 /* KMNetworking.framework */; };
+		2F089C351A1057D0006A2EC0 /* KMPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C071A104F0F006A2EC0 /* KMPersistence.framework */; };
+		2F1D52EA1A32A36600FC3BAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1D52E91A32A36600FC3BAD /* Main.storyboard */; };
+		2F1D52FB1A32A3F500FC3BAD /* TestDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1D52FA1A32A3F500FC3BAD /* TestDataSource.m */; };
+		2F1D52FE1A32A4DB00FC3BAD /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1D52FD1A32A4DB00FC3BAD /* TestView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F089B981A104A75006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089B761A104A75006A2EC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F089B7D1A104A75006A2EC0;
+			remoteInfo = KMCommonCodeExample;
+		};
+		2F089BD91A104CD9006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BCA1A104CD8006A2EC0 /* KMCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F089B391A103E2A006A2EC0;
+			remoteInfo = KMCore;
+		};
+		2F089BDB1A104CD9006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BCA1A104CD8006A2EC0 /* KMCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F089B441A103E2A006A2EC0;
+			remoteInfo = KMCoreTests;
+		};
+		2F089BE01A104CD9006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BD01A104CD8006A2EC0 /* KMNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F18309E1A03E6CF007522E8;
+			remoteInfo = KMNetworking;
+		};
+		2F089BE21A104CD9006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BD01A104CD8006A2EC0 /* KMNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F1830A91A03E6CF007522E8;
+			remoteInfo = KMNetworkingTests;
+		};
+		2F089BE71A104CD9006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BD31A104CD8006A2EC0 /* KMParseSync.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F089B161A103D12006A2EC0;
+			remoteInfo = KMParseSync;
+		};
+		2F089BE91A104CD9006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BD31A104CD8006A2EC0 /* KMParseSync.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F089B211A103D13006A2EC0;
+			remoteInfo = KMParseSyncTests;
+		};
+		2F089BEF1A104CD9006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BCD1A104CD8006A2EC0 /* KMPersistence.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F54B8EA1A00ED030061D453;
+			remoteInfo = KMPersistence;
+		};
+		2F089BF11A104CD9006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BCD1A104CD8006A2EC0 /* KMPersistence.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F54B8F51A00ED030061D453;
+			remoteInfo = KMPersistenceTests;
+		};
+		2F089BF31A104D0B006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BCA1A104CD8006A2EC0 /* KMCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F089B6E1A104982006A2EC0;
+			remoteInfo = "KMCore Framework";
+		};
+		2F089BF51A104D19006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BD01A104CD8006A2EC0 /* KMNetworking.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F1830CC1A03E86F007522E8;
+			remoteInfo = "KMNetworking Framework";
+		};
+		2F089BF71A104D1F006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BCD1A104CD8006A2EC0 /* KMPersistence.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F54B92E1A00F5FE0061D453;
+			remoteInfo = "KMPersistence Framework";
+		};
+		2F089BF91A104D25006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BD31A104CD8006A2EC0 /* KMParseSync.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F089B621A104893006A2EC0;
+			remoteInfo = "KMParseSync Framework";
+		};
+		2F089BFF1A104DCC006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BCD1A104CD8006A2EC0 /* KMPersistence.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F1830531A0259B2007522E8;
+			remoteInfo = KMMoGenerator;
+		};
+		2F089C011A104DF0006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089B761A104A75006A2EC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F089BFB1A104DB7006A2EC0;
+			remoteInfo = "KMCommonCode MoGenerator";
+		};
+		2F089C4B1A105C0E006A2EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BD31A104CD8006A2EC0 /* KMParseSync.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F089C461A105BB7006A2EC0;
+			remoteInfo = "KMParseSync MoGenerator";
+		};
+		2F1D52EF1A32A36700FC3BAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BCA1A104CD8006A2EC0 /* KMCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F1D52D01A3293A500FC3BAD;
+			remoteInfo = "KMCore Module";
+		};
+		2F1D52F11A32A36700FC3BAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F089BCA1A104CD8006A2EC0 /* KMCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F1D52DA1A3293A500FC3BAD;
+			remoteInfo = "KMCore ModuleTests";
+		};
+		2F88DF211A5352E60072AB53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F88DF181A5352E50072AB53 /* KMCustomUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F88DEEC1A5352E50072AB53;
+			remoteInfo = KMCustomUI;
+		};
+		2F88DF231A5352E60072AB53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F88DF181A5352E50072AB53 /* KMCustomUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F88DF081A5352E50072AB53;
+			remoteInfo = KMCustomUITests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F089B7E1A104A75006A2EC0 /* KMCommonCodeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMCommonCodeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F089B971A104A75006A2EC0 /* KMCommonCodeExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMCommonCodeExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F089B9C1A104A75006A2EC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F089B9D1A104A75006A2EC0 /* KMCommonCodeExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMCommonCodeExampleTests.m; sourceTree = "<group>"; };
+		2F089BB01A104B81006A2EC0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2F089BB11A104B81006A2EC0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2F089BB31A104B89006A2EC0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2F089BB41A104B89006A2EC0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2F089BB61A104BA0006A2EC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2F089BC01A104BCE006A2EC0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F089BC11A104BCE006A2EC0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2F089BCA1A104CD8006A2EC0 /* KMCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KMCore.xcodeproj; path = ../KMCore/KMCore.xcodeproj; sourceTree = "<group>"; };
+		2F089BCD1A104CD8006A2EC0 /* KMPersistence.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KMPersistence.xcodeproj; path = ../KMPersistence/KMPersistence.xcodeproj; sourceTree = "<group>"; };
+		2F089BD01A104CD8006A2EC0 /* KMNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KMNetworking.xcodeproj; path = ../KMNetworking/KMNetworking.xcodeproj; sourceTree = "<group>"; };
+		2F089BD31A104CD8006A2EC0 /* KMParseSync.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KMParseSync.xcodeproj; path = ../KMParseSync/KMParseSync.xcodeproj; sourceTree = "<group>"; };
+		2F089C041A104F0F006A2EC0 /* KMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KMCore.framework; sourceTree = "<group>"; };
+		2F089C051A104F0F006A2EC0 /* KMNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KMNetworking.framework; sourceTree = "<group>"; };
+		2F089C061A104F0F006A2EC0 /* KMParseSync.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KMParseSync.framework; sourceTree = "<group>"; };
+		2F089C071A104F0F006A2EC0 /* KMPersistence.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KMPersistence.framework; sourceTree = "<group>"; };
+		2F089C0D1A104F33006A2EC0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		2F089C0E1A104F33006A2EC0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		2F089C0F1A104F33006A2EC0 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		2F1D52E91A32A36600FC3BAD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2F1D52F91A32A3F500FC3BAD /* TestDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataSource.h; sourceTree = "<group>"; };
+		2F1D52FA1A32A3F500FC3BAD /* TestDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataSource.m; sourceTree = "<group>"; };
+		2F1D52FC1A32A4DB00FC3BAD /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		2F1D52FD1A32A4DB00FC3BAD /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		2F88DF181A5352E50072AB53 /* KMCustomUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KMCustomUI.xcodeproj; path = ../KMCustomUI/KMCustomUI.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F089B7B1A104A75006A2EC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F089C121A104F33006A2EC0 /* ParseFacebookUtils.framework in Frameworks */,
+				2F089C101A104F33006A2EC0 /* Bolts.framework in Frameworks */,
+				2F089C0B1A104F0F006A2EC0 /* KMPersistence.framework in Frameworks */,
+				2F089C0A1A104F0F006A2EC0 /* KMParseSync.framework in Frameworks */,
+				2F089C091A104F0F006A2EC0 /* KMNetworking.framework in Frameworks */,
+				2F089C111A104F33006A2EC0 /* Parse.framework in Frameworks */,
+				2F089C081A104F0F006A2EC0 /* KMCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F089B941A104A75006A2EC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F089C2F1A1057B5006A2EC0 /* KMParseSync.framework in Frameworks */,
+				2F089C311A1057BD006A2EC0 /* Parse.framework in Frameworks */,
+				2F089C351A1057D0006A2EC0 /* KMPersistence.framework in Frameworks */,
+				2F089C321A1057BD006A2EC0 /* ParseFacebookUtils.framework in Frameworks */,
+				2F089C301A1057BD006A2EC0 /* Bolts.framework in Frameworks */,
+				2F089C341A1057D0006A2EC0 /* KMNetworking.framework in Frameworks */,
+				2F089C331A1057D0006A2EC0 /* KMCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F089B751A104A75006A2EC0 = {
+			isa = PBXGroup;
+			children = (
+				2F0C27FF1A52264E00B5CF71 /* Swift_Projects */,
+				2F089BC91A104CA5006A2EC0 /* ObjC_Projects */,
+				2F089B801A104A75006A2EC0 /* KMCommonCodeExample */,
+				2F089B9A1A104A75006A2EC0 /* KMCommonCodeExampleTests */,
+				2F089C031A104F0F006A2EC0 /* Frameworks */,
+				2F089C0C1A104F33006A2EC0 /* ThirdParty */,
+				2F089B7F1A104A75006A2EC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F089B7F1A104A75006A2EC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F089B7E1A104A75006A2EC0 /* KMCommonCodeExample.app */,
+				2F089B971A104A75006A2EC0 /* KMCommonCodeExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F089B801A104A75006A2EC0 /* KMCommonCodeExample */ = {
+			isa = PBXGroup;
+			children = (
+				2F089BB01A104B81006A2EC0 /* AppDelegate.h */,
+				2F089BB11A104B81006A2EC0 /* AppDelegate.m */,
+				2F089BB31A104B89006A2EC0 /* ViewController.h */,
+				2F089BB41A104B89006A2EC0 /* ViewController.m */,
+				2F089BB61A104BA0006A2EC0 /* Images.xcassets */,
+				2F089BC41A104BED006A2EC0 /* Supporting Files */,
+				2F1D52E91A32A36600FC3BAD /* Main.storyboard */,
+				2F1D52F91A32A3F500FC3BAD /* TestDataSource.h */,
+				2F1D52FA1A32A3F500FC3BAD /* TestDataSource.m */,
+				2F1D52FC1A32A4DB00FC3BAD /* TestView.h */,
+				2F1D52FD1A32A4DB00FC3BAD /* TestView.m */,
+			);
+			path = KMCommonCodeExample;
+			sourceTree = "<group>";
+		};
+		2F089B9A1A104A75006A2EC0 /* KMCommonCodeExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F089B9D1A104A75006A2EC0 /* KMCommonCodeExampleTests.m */,
+				2F089B9B1A104A75006A2EC0 /* Supporting Files */,
+			);
+			path = KMCommonCodeExampleTests;
+			sourceTree = "<group>";
+		};
+		2F089B9B1A104A75006A2EC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F089B9C1A104A75006A2EC0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2F089BC41A104BED006A2EC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F089BC01A104BCE006A2EC0 /* Info.plist */,
+				2F089BC11A104BCE006A2EC0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2F089BC91A104CA5006A2EC0 /* ObjC_Projects */ = {
+			isa = PBXGroup;
+			children = (
+				2F88DF181A5352E50072AB53 /* KMCustomUI.xcodeproj */,
+				2F089BCA1A104CD8006A2EC0 /* KMCore.xcodeproj */,
+				2F089BD01A104CD8006A2EC0 /* KMNetworking.xcodeproj */,
+				2F089BCD1A104CD8006A2EC0 /* KMPersistence.xcodeproj */,
+				2F089BD31A104CD8006A2EC0 /* KMParseSync.xcodeproj */,
+			);
+			name = ObjC_Projects;
+			sourceTree = "<group>";
+		};
+		2F089BCB1A104CD8006A2EC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F089BDA1A104CD9006A2EC0 /* libKMCore.a */,
+				2F089BDC1A104CD9006A2EC0 /* KMCoreTests.xctest */,
+				2F1D52F01A32A36700FC3BAD /* KMModuleCore.framework */,
+				2F1D52F21A32A36700FC3BAD /* KMCore ModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F089BCE1A104CD8006A2EC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F089BF01A104CD9006A2EC0 /* libKMPersistence.a */,
+				2F089BF21A104CD9006A2EC0 /* KMPersistenceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F089BD11A104CD8006A2EC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F089BE11A104CD9006A2EC0 /* libKMNetworking.a */,
+				2F089BE31A104CD9006A2EC0 /* KMNetworkingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F089BD41A104CD8006A2EC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F089BE81A104CD9006A2EC0 /* libKMParseSync.a */,
+				2F089BEA1A104CD9006A2EC0 /* KMParseSyncTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F089C031A104F0F006A2EC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F089C041A104F0F006A2EC0 /* KMCore.framework */,
+				2F089C051A104F0F006A2EC0 /* KMNetworking.framework */,
+				2F089C061A104F0F006A2EC0 /* KMParseSync.framework */,
+				2F089C071A104F0F006A2EC0 /* KMPersistence.framework */,
+			);
+			name = Frameworks;
+			path = ../Frameworks;
+			sourceTree = "<group>";
+		};
+		2F089C0C1A104F33006A2EC0 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				2F089C0D1A104F33006A2EC0 /* Bolts.framework */,
+				2F089C0E1A104F33006A2EC0 /* Parse.framework */,
+				2F089C0F1A104F33006A2EC0 /* ParseFacebookUtils.framework */,
+			);
+			name = ThirdParty;
+			path = ../ThirdParty;
+			sourceTree = "<group>";
+		};
+		2F0C27FF1A52264E00B5CF71 /* Swift_Projects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Swift_Projects;
+			sourceTree = "<group>";
+		};
+		2F88DF191A5352E50072AB53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F88DF221A5352E60072AB53 /* KMCustomUI.app */,
+				2F88DF241A5352E60072AB53 /* KMCustomUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F089B7D1A104A75006A2EC0 /* KMCommonCodeExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F089BA11A104A75006A2EC0 /* Build configuration list for PBXNativeTarget "KMCommonCodeExample" */;
+			buildPhases = (
+				2F089B7A1A104A75006A2EC0 /* Sources */,
+				2F089B7B1A104A75006A2EC0 /* Frameworks */,
+				2F089B7C1A104A75006A2EC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMCommonCodeExample;
+			productName = KMCommonCodeExample;
+			productReference = 2F089B7E1A104A75006A2EC0 /* KMCommonCodeExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F089B961A104A75006A2EC0 /* KMCommonCodeExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F089BA41A104A75006A2EC0 /* Build configuration list for PBXNativeTarget "KMCommonCodeExampleTests" */;
+			buildPhases = (
+				2F089B931A104A75006A2EC0 /* Sources */,
+				2F089B941A104A75006A2EC0 /* Frameworks */,
+				2F089B951A104A75006A2EC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F089B991A104A75006A2EC0 /* PBXTargetDependency */,
+			);
+			name = KMCommonCodeExampleTests;
+			productName = KMCommonCodeExampleTests;
+			productReference = 2F089B971A104A75006A2EC0 /* KMCommonCodeExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F089B761A104A75006A2EC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Keith Moon";
+				TargetAttributes = {
+					2F089B7D1A104A75006A2EC0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					2F089B961A104A75006A2EC0 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 2F089B7D1A104A75006A2EC0;
+					};
+					2F089BC51A104C8F006A2EC0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					2F089BFB1A104DB7006A2EC0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 2F089B791A104A75006A2EC0 /* Build configuration list for PBXProject "KMCommonCode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F089B751A104A75006A2EC0;
+			productRefGroup = 2F089B7F1A104A75006A2EC0 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2F089BCB1A104CD8006A2EC0 /* Products */;
+					ProjectRef = 2F089BCA1A104CD8006A2EC0 /* KMCore.xcodeproj */;
+				},
+				{
+					ProductGroup = 2F88DF191A5352E50072AB53 /* Products */;
+					ProjectRef = 2F88DF181A5352E50072AB53 /* KMCustomUI.xcodeproj */;
+				},
+				{
+					ProductGroup = 2F089BD11A104CD8006A2EC0 /* Products */;
+					ProjectRef = 2F089BD01A104CD8006A2EC0 /* KMNetworking.xcodeproj */;
+				},
+				{
+					ProductGroup = 2F089BD41A104CD8006A2EC0 /* Products */;
+					ProjectRef = 2F089BD31A104CD8006A2EC0 /* KMParseSync.xcodeproj */;
+				},
+				{
+					ProductGroup = 2F089BCE1A104CD8006A2EC0 /* Products */;
+					ProjectRef = 2F089BCD1A104CD8006A2EC0 /* KMPersistence.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				2F089B7D1A104A75006A2EC0 /* KMCommonCodeExample */,
+				2F089B961A104A75006A2EC0 /* KMCommonCodeExampleTests */,
+				2F089BFB1A104DB7006A2EC0 /* KMCommonCode MoGenerator */,
+				2F089BC51A104C8F006A2EC0 /* KMCommonCode Frameworks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2F089BDA1A104CD9006A2EC0 /* libKMCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKMCore.a;
+			remoteRef = 2F089BD91A104CD9006A2EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F089BDC1A104CD9006A2EC0 /* KMCoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KMCoreTests.xctest;
+			remoteRef = 2F089BDB1A104CD9006A2EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F089BE11A104CD9006A2EC0 /* libKMNetworking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKMNetworking.a;
+			remoteRef = 2F089BE01A104CD9006A2EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F089BE31A104CD9006A2EC0 /* KMNetworkingTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KMNetworkingTests.xctest;
+			remoteRef = 2F089BE21A104CD9006A2EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F089BE81A104CD9006A2EC0 /* libKMParseSync.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKMParseSync.a;
+			remoteRef = 2F089BE71A104CD9006A2EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F089BEA1A104CD9006A2EC0 /* KMParseSyncTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KMParseSyncTests.xctest;
+			remoteRef = 2F089BE91A104CD9006A2EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F089BF01A104CD9006A2EC0 /* libKMPersistence.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKMPersistence.a;
+			remoteRef = 2F089BEF1A104CD9006A2EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F089BF21A104CD9006A2EC0 /* KMPersistenceTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KMPersistenceTests.xctest;
+			remoteRef = 2F089BF11A104CD9006A2EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F1D52F01A32A36700FC3BAD /* KMModuleCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KMModuleCore.framework;
+			remoteRef = 2F1D52EF1A32A36700FC3BAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F1D52F21A32A36700FC3BAD /* KMCore ModuleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "KMCore ModuleTests.xctest";
+			remoteRef = 2F1D52F11A32A36700FC3BAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F88DF221A5352E60072AB53 /* KMCustomUI.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = KMCustomUI.app;
+			remoteRef = 2F88DF211A5352E60072AB53 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F88DF241A5352E60072AB53 /* KMCustomUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KMCustomUITests.xctest;
+			remoteRef = 2F88DF231A5352E60072AB53 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F089B7C1A104A75006A2EC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F1D52EA1A32A36600FC3BAD /* Main.storyboard in Resources */,
+				2F089BB71A104BA0006A2EC0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F089B951A104A75006A2EC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F089B7A1A104A75006A2EC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F089BB21A104B81006A2EC0 /* AppDelegate.m in Sources */,
+				2F089BC31A104BCE006A2EC0 /* main.m in Sources */,
+				2F1D52FE1A32A4DB00FC3BAD /* TestView.m in Sources */,
+				2F1D52FB1A32A3F500FC3BAD /* TestDataSource.m in Sources */,
+				2F089BB51A104B89006A2EC0 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F089B931A104A75006A2EC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F089B9E1A104A75006A2EC0 /* KMCommonCodeExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F089B991A104A75006A2EC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F089B7D1A104A75006A2EC0 /* KMCommonCodeExample */;
+			targetProxy = 2F089B981A104A75006A2EC0 /* PBXContainerItemProxy */;
+		};
+		2F089BF41A104D0B006A2EC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KMCore Framework";
+			targetProxy = 2F089BF31A104D0B006A2EC0 /* PBXContainerItemProxy */;
+		};
+		2F089BF61A104D19006A2EC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KMNetworking Framework";
+			targetProxy = 2F089BF51A104D19006A2EC0 /* PBXContainerItemProxy */;
+		};
+		2F089BF81A104D1F006A2EC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KMPersistence Framework";
+			targetProxy = 2F089BF71A104D1F006A2EC0 /* PBXContainerItemProxy */;
+		};
+		2F089BFA1A104D25006A2EC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KMParseSync Framework";
+			targetProxy = 2F089BF91A104D25006A2EC0 /* PBXContainerItemProxy */;
+		};
+		2F089C001A104DCC006A2EC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KMMoGenerator;
+			targetProxy = 2F089BFF1A104DCC006A2EC0 /* PBXContainerItemProxy */;
+		};
+		2F089C021A104DF0006A2EC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F089BFB1A104DB7006A2EC0 /* KMCommonCode MoGenerator */;
+			targetProxy = 2F089C011A104DF0006A2EC0 /* PBXContainerItemProxy */;
+		};
+		2F089C4C1A105C0E006A2EC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KMParseSync MoGenerator";
+			targetProxy = 2F089C4B1A105C0E006A2EC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2F089B9F1A104A75006A2EC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2F089BA01A104A75006A2EC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F089BA21A104A75006A2EC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/keefmoon/Dropbox/Projects/_CommonCode/Frameworks,
+					/Users/keefmoon/Dropbox/Projects/_CommonCode/ThirdParty,
+				);
+				INFOPLIST_FILE = KMCommonCodeExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2F089BA31A104A75006A2EC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/keefmoon/Dropbox/Projects/_CommonCode/Frameworks,
+					/Users/keefmoon/Dropbox/Projects/_CommonCode/ThirdParty,
+				);
+				INFOPLIST_FILE = KMCommonCodeExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2F089BA51A104A75006A2EC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					/Users/keefmoon/Dropbox/Projects/_CommonCode/Frameworks,
+					/Users/keefmoon/Dropbox/Projects/_CommonCode/ThirdParty,
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KMCommonCodeExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMCommonCodeExample.app/KMCommonCodeExample";
+			};
+			name = Debug;
+		};
+		2F089BA61A104A75006A2EC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					/Users/keefmoon/Dropbox/Projects/_CommonCode/Frameworks,
+					/Users/keefmoon/Dropbox/Projects/_CommonCode/ThirdParty,
+				);
+				INFOPLIST_FILE = KMCommonCodeExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMCommonCodeExample.app/KMCommonCodeExample";
+			};
+			name = Release;
+		};
+		2F089BC71A104C8F006A2EC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2F089BC81A104C8F006A2EC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2F089BFD1A104DB7006A2EC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2F089BFE1A104DB7006A2EC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F089B791A104A75006A2EC0 /* Build configuration list for PBXProject "KMCommonCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F089B9F1A104A75006A2EC0 /* Debug */,
+				2F089BA01A104A75006A2EC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F089BA11A104A75006A2EC0 /* Build configuration list for PBXNativeTarget "KMCommonCodeExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F089BA21A104A75006A2EC0 /* Debug */,
+				2F089BA31A104A75006A2EC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F089BA41A104A75006A2EC0 /* Build configuration list for PBXNativeTarget "KMCommonCodeExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F089BA51A104A75006A2EC0 /* Debug */,
+				2F089BA61A104A75006A2EC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F089BC61A104C8F006A2EC0 /* Build configuration list for PBXAggregateTarget "KMCommonCode Frameworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F089BC71A104C8F006A2EC0 /* Debug */,
+				2F089BC81A104C8F006A2EC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F089BFC1A104DB7006A2EC0 /* Build configuration list for PBXAggregateTarget "KMCommonCode MoGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F089BFD1A104DB7006A2EC0 /* Debug */,
+				2F089BFE1A104DB7006A2EC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F089B761A104A75006A2EC0 /* Project object */;
+}

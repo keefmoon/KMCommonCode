@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2F1830531A0259B2007522E8 /* KMPersistence MoGenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2F1830541A0259B2007522E8 /* Build configuration list for PBXAggregateTarget "KMPersistence MoGenerator" */;
+			buildPhases = (
+				2F1830571A0259C0007522E8 /* SingleEntityModel */,
+				2F18306B1A03AF3D007522E8 /* RelationshipModel */,
+			);
+			dependencies = (
+			);
+			name = "KMPersistence MoGenerator";
+			productName = TPMoGenerator;
+		};
+		2F54B92E1A00F5FE0061D453 /* KMPersistence Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2F54B92F1A00F5FE0061D453 /* Build configuration list for PBXAggregateTarget "KMPersistence Framework" */;
+			buildPhases = (
+				2F54B9341A00F6170061D453 /* Build Fat Binary */,
+			);
+			dependencies = (
+				2F54B9331A00F6130061D453 /* PBXTargetDependency */,
+			);
+			name = "KMPersistence Framework";
+			productName = "TravelexPersistence Framework";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2F089A7A1A1009D8006A2EC0 /* NSManagedObject+KMPMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F089A6B1A1009D8006A2EC0 /* NSManagedObject+KMPMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F089A7B1A1009D8006A2EC0 /* NSManagedObject+KMPMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089A6C1A1009D8006A2EC0 /* NSManagedObject+KMPMapping.m */; };
+		2F089A7C1A1009D8006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F089A6D1A1009D8006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F089A7D1A1009D8006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089A6E1A1009D8006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.m */; };
+		2F089A7E1A1009D8006A2EC0 /* KMPCoreDataStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F089A701A1009D8006A2EC0 /* KMPCoreDataStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F089A7F1A1009D8006A2EC0 /* KMPCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089A711A1009D8006A2EC0 /* KMPCoreDataStack.m */; };
+		2F089A801A1009D8006A2EC0 /* KMPDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F089A721A1009D8006A2EC0 /* KMPDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F089A811A1009D8006A2EC0 /* KMPDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089A731A1009D8006A2EC0 /* KMPDateFormatter.m */; };
+		2F089A821A1009D8006A2EC0 /* KMPResponseModelMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F089A741A1009D8006A2EC0 /* KMPResponseModelMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F089A831A1009D8006A2EC0 /* KMPResponseModelMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089A751A1009D8006A2EC0 /* KMPResponseModelMapper.m */; };
+		2F089A841A1009D8006A2EC0 /* KMPErrorDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F089A771A1009D8006A2EC0 /* KMPErrorDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F089A851A1009D8006A2EC0 /* KMPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F089A781A1009D8006A2EC0 /* KMPersistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F089A861A1009D8006A2EC0 /* KMPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089A791A1009D8006A2EC0 /* KMPersistence.m */; };
+		2F089AB71A100A11006A2EC0 /* RelationshipTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F089A8A1A100A11006A2EC0 /* RelationshipTest.json */; };
+		2F089AB81A100A11006A2EC0 /* SingleEntityTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F089A8B1A100A11006A2EC0 /* SingleEntityTest.json */; };
+		2F089AC71A100A11006A2EC0 /* RelationshipModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AAB1A100A11006A2EC0 /* RelationshipModel.xcdatamodeld */; };
+		2F089AC81A100A11006A2EC0 /* SingleEntityModel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2F089AAD1A100A11006A2EC0 /* SingleEntityModel.sqlite */; };
+		2F089AC91A100A11006A2EC0 /* SingleEntityModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AAE1A100A11006A2EC0 /* SingleEntityModel.xcdatamodeld */; };
+		2F089ACA1A100A11006A2EC0 /* KMPBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AB21A100A11006A2EC0 /* KMPBaseTests.m */; };
+		2F089ACB1A100A11006A2EC0 /* KMPCoreDataStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AB31A100A11006A2EC0 /* KMPCoreDataStackTests.m */; };
+		2F089ACC1A100A11006A2EC0 /* KMPRelationshipMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AB41A100A11006A2EC0 /* KMPRelationshipMappingTests.m */; };
+		2F089ACD1A100A11006A2EC0 /* KMPSingleEntityMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AB51A100A11006A2EC0 /* KMPSingleEntityMappingTests.m */; };
+		2F089AD01A100B74006A2EC0 /* KMPCoreDataStack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A701A1009D8006A2EC0 /* KMPCoreDataStack.h */; };
+		2F089AD11A100B74006A2EC0 /* KMPDateFormatter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A721A1009D8006A2EC0 /* KMPDateFormatter.h */; };
+		2F089AD21A100B74006A2EC0 /* KMPResponseModelMapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A741A1009D8006A2EC0 /* KMPResponseModelMapper.h */; };
+		2F089AD31A100B74006A2EC0 /* NSManagedObject+KMPMapping.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A6B1A1009D8006A2EC0 /* NSManagedObject+KMPMapping.h */; };
+		2F089AD41A100B74006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A6D1A1009D8006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.h */; };
+		2F089AD51A100B74006A2EC0 /* KMPErrorDefines.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A771A1009D8006A2EC0 /* KMPErrorDefines.h */; };
+		2F089AD61A100B74006A2EC0 /* KMPersistence.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A781A1009D8006A2EC0 /* KMPersistence.h */; };
+		2F089AF51A10111F006A2EC0 /* KMPManyToManyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AD91A10111F006A2EC0 /* KMPManyToManyTest.m */; };
+		2F089AF61A10111F006A2EC0 /* KMPManyToOneTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089ADB1A10111F006A2EC0 /* KMPManyToOneTest.m */; };
+		2F089AF71A10111F006A2EC0 /* KMPOneToManyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089ADD1A10111F006A2EC0 /* KMPOneToManyTest.m */; };
+		2F089AF81A10111F006A2EC0 /* KMPOneToOneTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089ADF1A10111F006A2EC0 /* KMPOneToOneTest.m */; };
+		2F089AF91A10111F006A2EC0 /* KMPSecondLevelDeepTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AE11A10111F006A2EC0 /* KMPSecondLevelDeepTest.m */; };
+		2F089AFA1A10111F006A2EC0 /* KMPSingleEntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AE31A10111F006A2EC0 /* KMPSingleEntityTest.m */; };
+		2F089AFB1A10111F006A2EC0 /* KMPTopLevelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AE51A10111F006A2EC0 /* KMPTopLevelTest.m */; };
+		2F089AFC1A10111F006A2EC0 /* _KMPManyToManyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AE81A10111F006A2EC0 /* _KMPManyToManyTest.m */; };
+		2F089AFD1A10111F006A2EC0 /* _KMPManyToOneTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AEA1A10111F006A2EC0 /* _KMPManyToOneTest.m */; };
+		2F089AFE1A10111F006A2EC0 /* _KMPOneToManyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AEC1A10111F006A2EC0 /* _KMPOneToManyTest.m */; };
+		2F089AFF1A10111F006A2EC0 /* _KMPOneToOneTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AEE1A10111F006A2EC0 /* _KMPOneToOneTest.m */; };
+		2F089B001A10111F006A2EC0 /* _KMPSecondLevelDeepTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AF01A10111F006A2EC0 /* _KMPSecondLevelDeepTest.m */; };
+		2F089B011A10111F006A2EC0 /* _KMPSingleEntityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AF21A10111F006A2EC0 /* _KMPSingleEntityTest.m */; };
+		2F089B021A10111F006A2EC0 /* _KMPTopLevelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089AF41A10111F006A2EC0 /* _KMPTopLevelTest.m */; };
+		2F54B8F61A00ED030061D453 /* libKMPersistence.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F54B8EA1A00ED030061D453 /* libKMPersistence.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F54B8F71A00ED030061D453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F54B8E21A00ED030061D453 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F54B8E91A00ED030061D453;
+			remoteInfo = TravelexPersistence;
+		};
+		2F54B9321A00F6130061D453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F54B8E21A00ED030061D453 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F54B8E91A00ED030061D453;
+			remoteInfo = TravelexPersistence;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2F54B8E81A00ED030061D453 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				2F089AD01A100B74006A2EC0 /* KMPCoreDataStack.h in CopyFiles */,
+				2F089AD11A100B74006A2EC0 /* KMPDateFormatter.h in CopyFiles */,
+				2F089AD21A100B74006A2EC0 /* KMPResponseModelMapper.h in CopyFiles */,
+				2F089AD31A100B74006A2EC0 /* NSManagedObject+KMPMapping.h in CopyFiles */,
+				2F089AD41A100B74006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.h in CopyFiles */,
+				2F089AD51A100B74006A2EC0 /* KMPErrorDefines.h in CopyFiles */,
+				2F089AD61A100B74006A2EC0 /* KMPersistence.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F089A6B1A1009D8006A2EC0 /* NSManagedObject+KMPMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+KMPMapping.h"; sourceTree = "<group>"; };
+		2F089A6C1A1009D8006A2EC0 /* NSManagedObject+KMPMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+KMPMapping.m"; sourceTree = "<group>"; };
+		2F089A6D1A1009D8006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+KMPFetchOrInsert.h"; sourceTree = "<group>"; };
+		2F089A6E1A1009D8006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+KMPFetchOrInsert.m"; sourceTree = "<group>"; };
+		2F089A701A1009D8006A2EC0 /* KMPCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMPCoreDataStack.h; path = Classes/KMPCoreDataStack.h; sourceTree = "<group>"; };
+		2F089A711A1009D8006A2EC0 /* KMPCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMPCoreDataStack.m; path = Classes/KMPCoreDataStack.m; sourceTree = "<group>"; };
+		2F089A721A1009D8006A2EC0 /* KMPDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMPDateFormatter.h; path = Classes/KMPDateFormatter.h; sourceTree = "<group>"; };
+		2F089A731A1009D8006A2EC0 /* KMPDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMPDateFormatter.m; path = Classes/KMPDateFormatter.m; sourceTree = "<group>"; };
+		2F089A741A1009D8006A2EC0 /* KMPResponseModelMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMPResponseModelMapper.h; path = Classes/KMPResponseModelMapper.h; sourceTree = "<group>"; };
+		2F089A751A1009D8006A2EC0 /* KMPResponseModelMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMPResponseModelMapper.m; path = Classes/KMPResponseModelMapper.m; sourceTree = "<group>"; };
+		2F089A771A1009D8006A2EC0 /* KMPErrorDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPErrorDefines.h; sourceTree = "<group>"; };
+		2F089A781A1009D8006A2EC0 /* KMPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPersistence.h; sourceTree = "<group>"; };
+		2F089A791A1009D8006A2EC0 /* KMPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPersistence.m; sourceTree = "<group>"; };
+		2F089A881A100A11006A2EC0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../KMPersistenceTests/Info.plist; sourceTree = "<group>"; };
+		2F089A8A1A100A11006A2EC0 /* RelationshipTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RelationshipTest.json; sourceTree = "<group>"; };
+		2F089A8B1A100A11006A2EC0 /* SingleEntityTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SingleEntityTest.json; sourceTree = "<group>"; };
+		2F089AAC1A100A11006A2EC0 /* RelationshipModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RelationshipModel.xcdatamodel; sourceTree = "<group>"; };
+		2F089AAD1A100A11006A2EC0 /* SingleEntityModel.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SingleEntityModel.sqlite; sourceTree = "<group>"; };
+		2F089AAF1A100A11006A2EC0 /* SingleEntityModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SingleEntityModel.xcdatamodel; sourceTree = "<group>"; };
+		2F089AB11A100A11006A2EC0 /* KMPBaseTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPBaseTests.h; sourceTree = "<group>"; };
+		2F089AB21A100A11006A2EC0 /* KMPBaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPBaseTests.m; sourceTree = "<group>"; };
+		2F089AB31A100A11006A2EC0 /* KMPCoreDataStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPCoreDataStackTests.m; sourceTree = "<group>"; };
+		2F089AB41A100A11006A2EC0 /* KMPRelationshipMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPRelationshipMappingTests.m; sourceTree = "<group>"; };
+		2F089AB51A100A11006A2EC0 /* KMPSingleEntityMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPSingleEntityMappingTests.m; sourceTree = "<group>"; };
+		2F089AD81A10111F006A2EC0 /* KMPManyToManyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPManyToManyTest.h; sourceTree = "<group>"; };
+		2F089AD91A10111F006A2EC0 /* KMPManyToManyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPManyToManyTest.m; sourceTree = "<group>"; };
+		2F089ADA1A10111F006A2EC0 /* KMPManyToOneTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPManyToOneTest.h; sourceTree = "<group>"; };
+		2F089ADB1A10111F006A2EC0 /* KMPManyToOneTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPManyToOneTest.m; sourceTree = "<group>"; };
+		2F089ADC1A10111F006A2EC0 /* KMPOneToManyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPOneToManyTest.h; sourceTree = "<group>"; };
+		2F089ADD1A10111F006A2EC0 /* KMPOneToManyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPOneToManyTest.m; sourceTree = "<group>"; };
+		2F089ADE1A10111F006A2EC0 /* KMPOneToOneTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPOneToOneTest.h; sourceTree = "<group>"; };
+		2F089ADF1A10111F006A2EC0 /* KMPOneToOneTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPOneToOneTest.m; sourceTree = "<group>"; };
+		2F089AE01A10111F006A2EC0 /* KMPSecondLevelDeepTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPSecondLevelDeepTest.h; sourceTree = "<group>"; };
+		2F089AE11A10111F006A2EC0 /* KMPSecondLevelDeepTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPSecondLevelDeepTest.m; sourceTree = "<group>"; };
+		2F089AE21A10111F006A2EC0 /* KMPSingleEntityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPSingleEntityTest.h; sourceTree = "<group>"; };
+		2F089AE31A10111F006A2EC0 /* KMPSingleEntityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPSingleEntityTest.m; sourceTree = "<group>"; };
+		2F089AE41A10111F006A2EC0 /* KMPTopLevelTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPTopLevelTest.h; sourceTree = "<group>"; };
+		2F089AE51A10111F006A2EC0 /* KMPTopLevelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPTopLevelTest.m; sourceTree = "<group>"; };
+		2F089AE71A10111F006A2EC0 /* _KMPManyToManyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _KMPManyToManyTest.h; sourceTree = "<group>"; };
+		2F089AE81A10111F006A2EC0 /* _KMPManyToManyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _KMPManyToManyTest.m; sourceTree = "<group>"; };
+		2F089AE91A10111F006A2EC0 /* _KMPManyToOneTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _KMPManyToOneTest.h; sourceTree = "<group>"; };
+		2F089AEA1A10111F006A2EC0 /* _KMPManyToOneTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _KMPManyToOneTest.m; sourceTree = "<group>"; };
+		2F089AEB1A10111F006A2EC0 /* _KMPOneToManyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _KMPOneToManyTest.h; sourceTree = "<group>"; };
+		2F089AEC1A10111F006A2EC0 /* _KMPOneToManyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _KMPOneToManyTest.m; sourceTree = "<group>"; };
+		2F089AED1A10111F006A2EC0 /* _KMPOneToOneTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _KMPOneToOneTest.h; sourceTree = "<group>"; };
+		2F089AEE1A10111F006A2EC0 /* _KMPOneToOneTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _KMPOneToOneTest.m; sourceTree = "<group>"; };
+		2F089AEF1A10111F006A2EC0 /* _KMPSecondLevelDeepTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _KMPSecondLevelDeepTest.h; sourceTree = "<group>"; };
+		2F089AF01A10111F006A2EC0 /* _KMPSecondLevelDeepTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _KMPSecondLevelDeepTest.m; sourceTree = "<group>"; };
+		2F089AF11A10111F006A2EC0 /* _KMPSingleEntityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _KMPSingleEntityTest.h; sourceTree = "<group>"; };
+		2F089AF21A10111F006A2EC0 /* _KMPSingleEntityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _KMPSingleEntityTest.m; sourceTree = "<group>"; };
+		2F089AF31A10111F006A2EC0 /* _KMPTopLevelTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _KMPTopLevelTest.h; sourceTree = "<group>"; };
+		2F089AF41A10111F006A2EC0 /* _KMPTopLevelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _KMPTopLevelTest.m; sourceTree = "<group>"; };
+		2F54B8EA1A00ED030061D453 /* libKMPersistence.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKMPersistence.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F54B8F51A00ED030061D453 /* KMPersistenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMPersistenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F54B9141A00EDBF0061D453 /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		2F54B9151A00EDBF0061D453 /* Bundle.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Bundle.xcconfig; sourceTree = "<group>"; };
+		2F54B9161A00EDBF0061D453 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		2F54B9171A00EDBF0061D453 /* Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Library.xcconfig; sourceTree = "<group>"; };
+		2F54B9181A00EDBF0061D453 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		2F54B9191A00EDBF0061D453 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		2F54B91A1A00EDBF0061D453 /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tests.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F54B8E71A00ED030061D453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F54B8F21A00ED030061D453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F54B8F61A00ED030061D453 /* libKMPersistence.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F089A691A1009D8006A2EC0 /* KMPersistence */ = {
+			isa = PBXGroup;
+			children = (
+				2F089ACE1A100A1E006A2EC0 /* CoreDataStack */,
+				2F089ACF1A100A6B006A2EC0 /* Mapping */,
+				2F089A6A1A1009D8006A2EC0 /* Categories */,
+				2F089A771A1009D8006A2EC0 /* KMPErrorDefines.h */,
+				2F089A781A1009D8006A2EC0 /* KMPersistence.h */,
+				2F089A791A1009D8006A2EC0 /* KMPersistence.m */,
+			);
+			path = KMPersistence;
+			sourceTree = "<group>";
+		};
+		2F089A6A1A1009D8006A2EC0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2F089A6B1A1009D8006A2EC0 /* NSManagedObject+KMPMapping.h */,
+				2F089A6C1A1009D8006A2EC0 /* NSManagedObject+KMPMapping.m */,
+				2F089A6D1A1009D8006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.h */,
+				2F089A6E1A1009D8006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2F089A871A100A11006A2EC0 /* KMPersistenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F089A891A100A11006A2EC0 /* JSONData */,
+				2F089A8C1A100A11006A2EC0 /* Models */,
+				2F089AB01A100A11006A2EC0 /* Tests */,
+				2F54B8FA1A00ED030061D453 /* Supporting Files */,
+			);
+			path = KMPersistenceTests;
+			sourceTree = "<group>";
+		};
+		2F089A891A100A11006A2EC0 /* JSONData */ = {
+			isa = PBXGroup;
+			children = (
+				2F089A8A1A100A11006A2EC0 /* RelationshipTest.json */,
+				2F089A8B1A100A11006A2EC0 /* SingleEntityTest.json */,
+			);
+			path = JSONData;
+			sourceTree = "<group>";
+		};
+		2F089A8C1A100A11006A2EC0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F089AD71A10111F006A2EC0 /* Human */,
+				2F089AE61A10111F006A2EC0 /* Machine */,
+				2F089AAB1A100A11006A2EC0 /* RelationshipModel.xcdatamodeld */,
+				2F089AAD1A100A11006A2EC0 /* SingleEntityModel.sqlite */,
+				2F089AAE1A100A11006A2EC0 /* SingleEntityModel.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F089AB01A100A11006A2EC0 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2F089AB11A100A11006A2EC0 /* KMPBaseTests.h */,
+				2F089AB21A100A11006A2EC0 /* KMPBaseTests.m */,
+				2F089AB31A100A11006A2EC0 /* KMPCoreDataStackTests.m */,
+				2F089AB41A100A11006A2EC0 /* KMPRelationshipMappingTests.m */,
+				2F089AB51A100A11006A2EC0 /* KMPSingleEntityMappingTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		2F089ACE1A100A1E006A2EC0 /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				2F089A701A1009D8006A2EC0 /* KMPCoreDataStack.h */,
+				2F089A711A1009D8006A2EC0 /* KMPCoreDataStack.m */,
+			);
+			name = CoreDataStack;
+			sourceTree = "<group>";
+		};
+		2F089ACF1A100A6B006A2EC0 /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				2F089A721A1009D8006A2EC0 /* KMPDateFormatter.h */,
+				2F089A731A1009D8006A2EC0 /* KMPDateFormatter.m */,
+				2F089A741A1009D8006A2EC0 /* KMPResponseModelMapper.h */,
+				2F089A751A1009D8006A2EC0 /* KMPResponseModelMapper.m */,
+			);
+			name = Mapping;
+			sourceTree = "<group>";
+		};
+		2F089AD71A10111F006A2EC0 /* Human */ = {
+			isa = PBXGroup;
+			children = (
+				2F089AD81A10111F006A2EC0 /* KMPManyToManyTest.h */,
+				2F089AD91A10111F006A2EC0 /* KMPManyToManyTest.m */,
+				2F089ADA1A10111F006A2EC0 /* KMPManyToOneTest.h */,
+				2F089ADB1A10111F006A2EC0 /* KMPManyToOneTest.m */,
+				2F089ADC1A10111F006A2EC0 /* KMPOneToManyTest.h */,
+				2F089ADD1A10111F006A2EC0 /* KMPOneToManyTest.m */,
+				2F089ADE1A10111F006A2EC0 /* KMPOneToOneTest.h */,
+				2F089ADF1A10111F006A2EC0 /* KMPOneToOneTest.m */,
+				2F089AE01A10111F006A2EC0 /* KMPSecondLevelDeepTest.h */,
+				2F089AE11A10111F006A2EC0 /* KMPSecondLevelDeepTest.m */,
+				2F089AE21A10111F006A2EC0 /* KMPSingleEntityTest.h */,
+				2F089AE31A10111F006A2EC0 /* KMPSingleEntityTest.m */,
+				2F089AE41A10111F006A2EC0 /* KMPTopLevelTest.h */,
+				2F089AE51A10111F006A2EC0 /* KMPTopLevelTest.m */,
+			);
+			path = Human;
+			sourceTree = "<group>";
+		};
+		2F089AE61A10111F006A2EC0 /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				2F089AE71A10111F006A2EC0 /* _KMPManyToManyTest.h */,
+				2F089AE81A10111F006A2EC0 /* _KMPManyToManyTest.m */,
+				2F089AE91A10111F006A2EC0 /* _KMPManyToOneTest.h */,
+				2F089AEA1A10111F006A2EC0 /* _KMPManyToOneTest.m */,
+				2F089AEB1A10111F006A2EC0 /* _KMPOneToManyTest.h */,
+				2F089AEC1A10111F006A2EC0 /* _KMPOneToManyTest.m */,
+				2F089AED1A10111F006A2EC0 /* _KMPOneToOneTest.h */,
+				2F089AEE1A10111F006A2EC0 /* _KMPOneToOneTest.m */,
+				2F089AEF1A10111F006A2EC0 /* _KMPSecondLevelDeepTest.h */,
+				2F089AF01A10111F006A2EC0 /* _KMPSecondLevelDeepTest.m */,
+				2F089AF11A10111F006A2EC0 /* _KMPSingleEntityTest.h */,
+				2F089AF21A10111F006A2EC0 /* _KMPSingleEntityTest.m */,
+				2F089AF31A10111F006A2EC0 /* _KMPTopLevelTest.h */,
+				2F089AF41A10111F006A2EC0 /* _KMPTopLevelTest.m */,
+			);
+			path = Machine;
+			sourceTree = "<group>";
+		};
+		2F54B8E11A00ED030061D453 = {
+			isa = PBXGroup;
+			children = (
+				2F089A691A1009D8006A2EC0 /* KMPersistence */,
+				2F089A871A100A11006A2EC0 /* KMPersistenceTests */,
+				2F54B9131A00EDBF0061D453 /* Configurations */,
+				2F54B8EB1A00ED030061D453 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F54B8EB1A00ED030061D453 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F54B8EA1A00ED030061D453 /* libKMPersistence.a */,
+				2F54B8F51A00ED030061D453 /* KMPersistenceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F54B8FA1A00ED030061D453 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F089A881A100A11006A2EC0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = ../TravelexPersistenceTests;
+			sourceTree = "<group>";
+		};
+		2F54B9131A00EDBF0061D453 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				2F54B9141A00EDBF0061D453 /* Application.xcconfig */,
+				2F54B9151A00EDBF0061D453 /* Bundle.xcconfig */,
+				2F54B9161A00EDBF0061D453 /* Debug.xcconfig */,
+				2F54B9171A00EDBF0061D453 /* Library.xcconfig */,
+				2F54B9181A00EDBF0061D453 /* Release.xcconfig */,
+				2F54B9191A00EDBF0061D453 /* Shared.xcconfig */,
+				2F54B91A1A00EDBF0061D453 /* Tests.xcconfig */,
+			);
+			name = Configurations;
+			path = ../Configurations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2F54B9261A00F5690061D453 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F089A801A1009D8006A2EC0 /* KMPDateFormatter.h in Headers */,
+				2F089A7A1A1009D8006A2EC0 /* NSManagedObject+KMPMapping.h in Headers */,
+				2F089A7E1A1009D8006A2EC0 /* KMPCoreDataStack.h in Headers */,
+				2F089A841A1009D8006A2EC0 /* KMPErrorDefines.h in Headers */,
+				2F089A851A1009D8006A2EC0 /* KMPersistence.h in Headers */,
+				2F089A821A1009D8006A2EC0 /* KMPResponseModelMapper.h in Headers */,
+				2F089A7C1A1009D8006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2F54B8E91A00ED030061D453 /* KMPersistence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F54B8FE1A00ED030061D453 /* Build configuration list for PBXNativeTarget "KMPersistence" */;
+			buildPhases = (
+				2F54B8E61A00ED030061D453 /* Sources */,
+				2F54B8E71A00ED030061D453 /* Frameworks */,
+				2F54B8E81A00ED030061D453 /* CopyFiles */,
+				2F54B9261A00F5690061D453 /* Headers */,
+				2F54B92D1A00F5B90061D453 /* Build Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMPersistence;
+			productName = TravelexPersistence;
+			productReference = 2F54B8EA1A00ED030061D453 /* libKMPersistence.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2F54B8F41A00ED030061D453 /* KMPersistenceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F54B9011A00ED030061D453 /* Build configuration list for PBXNativeTarget "KMPersistenceTests" */;
+			buildPhases = (
+				2F54B8F11A00ED030061D453 /* Sources */,
+				2F54B8F21A00ED030061D453 /* Frameworks */,
+				2F54B8F31A00ED030061D453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F54B8F81A00ED030061D453 /* PBXTargetDependency */,
+			);
+			name = KMPersistenceTests;
+			productName = TravelexPersistenceTests;
+			productReference = 2F54B8F51A00ED030061D453 /* KMPersistenceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F54B8E21A00ED030061D453 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Travelex Limited";
+				TargetAttributes = {
+					2F1830531A0259B2007522E8 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					2F54B8E91A00ED030061D453 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					2F54B8F41A00ED030061D453 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					2F54B92E1A00F5FE0061D453 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 2F54B8E51A00ED030061D453 /* Build configuration list for PBXProject "KMPersistence" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2F54B8E11A00ED030061D453;
+			productRefGroup = 2F54B8EB1A00ED030061D453 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F54B8E91A00ED030061D453 /* KMPersistence */,
+				2F54B8F41A00ED030061D453 /* KMPersistenceTests */,
+				2F54B92E1A00F5FE0061D453 /* KMPersistence Framework */,
+				2F1830531A0259B2007522E8 /* KMPersistence MoGenerator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F54B8F31A00ED030061D453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F089AB71A100A11006A2EC0 /* RelationshipTest.json in Resources */,
+				2F089AB81A100A11006A2EC0 /* SingleEntityTest.json in Resources */,
+				2F089AC81A100A11006A2EC0 /* SingleEntityModel.sqlite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F1830571A0259C0007522E8 /* SingleEntityModel */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SingleEntityModel;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "../MoGenerator/mogenerator -m KMPersistenceTests/Models/SingleEntityModel.xcdatamodeld -M KMPersistenceTests/Models/Machine -H KMPersistenceTests/Models/Human --template-var arc=true --template-var modules=true --template-path ../MoGenerator";
+		};
+		2F18306B1A03AF3D007522E8 /* RelationshipModel */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = RelationshipModel;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "../MoGenerator/mogenerator -m KMPersistenceTests/Models/RelationshipModel.xcdatamodeld -M KMPersistenceTests/Models/Machine -H KMPersistenceTests/Models/Human --template-var arc=true --template-var modules=true --template-path ../MoGenerator";
+		};
+		2F54B92D1A00F5B90061D453 /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"";
+		};
+		2F54B9341A00F6170061D453 /* Build Fat Binary */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Fat Binary";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework to the Framework directory\nditto \"${RW_FRAMEWORK_LOCATION}\" \"../Frameworks/${RW_FRAMEWORK_NAME}.framework\" -v\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F54B8E61A00ED030061D453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F089A811A1009D8006A2EC0 /* KMPDateFormatter.m in Sources */,
+				2F089A861A1009D8006A2EC0 /* KMPersistence.m in Sources */,
+				2F089A7B1A1009D8006A2EC0 /* NSManagedObject+KMPMapping.m in Sources */,
+				2F089A831A1009D8006A2EC0 /* KMPResponseModelMapper.m in Sources */,
+				2F089A7F1A1009D8006A2EC0 /* KMPCoreDataStack.m in Sources */,
+				2F089A7D1A1009D8006A2EC0 /* NSManagedObjectContext+KMPFetchOrInsert.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F54B8F11A00ED030061D453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F089ACA1A100A11006A2EC0 /* KMPBaseTests.m in Sources */,
+				2F089ACC1A100A11006A2EC0 /* KMPRelationshipMappingTests.m in Sources */,
+				2F089AC91A100A11006A2EC0 /* SingleEntityModel.xcdatamodeld in Sources */,
+				2F089B001A10111F006A2EC0 /* _KMPSecondLevelDeepTest.m in Sources */,
+				2F089AF81A10111F006A2EC0 /* KMPOneToOneTest.m in Sources */,
+				2F089AF91A10111F006A2EC0 /* KMPSecondLevelDeepTest.m in Sources */,
+				2F089AFD1A10111F006A2EC0 /* _KMPManyToOneTest.m in Sources */,
+				2F089B021A10111F006A2EC0 /* _KMPTopLevelTest.m in Sources */,
+				2F089ACB1A100A11006A2EC0 /* KMPCoreDataStackTests.m in Sources */,
+				2F089AF51A10111F006A2EC0 /* KMPManyToManyTest.m in Sources */,
+				2F089ACD1A100A11006A2EC0 /* KMPSingleEntityMappingTests.m in Sources */,
+				2F089B011A10111F006A2EC0 /* _KMPSingleEntityTest.m in Sources */,
+				2F089AC71A100A11006A2EC0 /* RelationshipModel.xcdatamodeld in Sources */,
+				2F089AFB1A10111F006A2EC0 /* KMPTopLevelTest.m in Sources */,
+				2F089AF61A10111F006A2EC0 /* KMPManyToOneTest.m in Sources */,
+				2F089AFC1A10111F006A2EC0 /* _KMPManyToManyTest.m in Sources */,
+				2F089AFF1A10111F006A2EC0 /* _KMPOneToOneTest.m in Sources */,
+				2F089AF71A10111F006A2EC0 /* KMPOneToManyTest.m in Sources */,
+				2F089AFA1A10111F006A2EC0 /* KMPSingleEntityTest.m in Sources */,
+				2F089AFE1A10111F006A2EC0 /* _KMPOneToManyTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F54B8F81A00ED030061D453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F54B8E91A00ED030061D453 /* KMPersistence */;
+			targetProxy = 2F54B8F71A00ED030061D453 /* PBXContainerItemProxy */;
+		};
+		2F54B9331A00F6130061D453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F54B8E91A00ED030061D453 /* KMPersistence */;
+			targetProxy = 2F54B9321A00F6130061D453 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2F1830551A0259B2007522E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2F1830561A0259B2007522E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2F54B8FC1A00ED030061D453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F54B9161A00EDBF0061D453 /* Debug.xcconfig */;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		2F54B8FD1A00ED030061D453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F54B9181A00EDBF0061D453 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		2F54B8FF1A00ED030061D453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F54B9171A00EDBF0061D453 /* Library.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = KMPersistence;
+			};
+			name = Debug;
+		};
+		2F54B9001A00ED030061D453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F54B9171A00EDBF0061D453 /* Library.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = KMPersistence;
+			};
+			name = Release;
+		};
+		2F54B9021A00ED030061D453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F54B91A1A00EDBF0061D453 /* Tests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KMPersistenceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = KMPersistenceTests;
+			};
+			name = Debug;
+		};
+		2F54B9031A00ED030061D453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F54B91A1A00EDBF0061D453 /* Tests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KMPersistenceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = KMPersistenceTests;
+			};
+			name = Release;
+		};
+		2F54B9301A00F5FE0061D453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "KMPersistence Framework";
+			};
+			name = Debug;
+		};
+		2F54B9311A00F5FE0061D453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "KMPersistence Framework";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F1830541A0259B2007522E8 /* Build configuration list for PBXAggregateTarget "KMPersistence MoGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F1830551A0259B2007522E8 /* Debug */,
+				2F1830561A0259B2007522E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F54B8E51A00ED030061D453 /* Build configuration list for PBXProject "KMPersistence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F54B8FC1A00ED030061D453 /* Debug */,
+				2F54B8FD1A00ED030061D453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F54B8FE1A00ED030061D453 /* Build configuration list for PBXNativeTarget "KMPersistence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F54B8FF1A00ED030061D453 /* Debug */,
+				2F54B9001A00ED030061D453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F54B9011A00ED030061D453 /* Build configuration list for PBXNativeTarget "KMPersistenceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F54B9021A00ED030061D453 /* Debug */,
+				2F54B9031A00ED030061D453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F54B92F1A00F5FE0061D453 /* Build configuration list for PBXAggregateTarget "KMPersistence Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F54B9301A00F5FE0061D453 /* Debug */,
+				2F54B9311A00F5FE0061D453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2F089AAB1A100A11006A2EC0 /* RelationshipModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F089AAC1A100A11006A2EC0 /* RelationshipModel.xcdatamodel */,
+			);
+			currentVersion = 2F089AAC1A100A11006A2EC0 /* RelationshipModel.xcdatamodel */;
+			path = RelationshipModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		2F089AAE1A100A11006A2EC0 /* SingleEntityModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F089AAF1A100A11006A2EC0 /* SingleEntityModel.xcdatamodel */,
+			);
+			currentVersion = 2F089AAF1A100A11006A2EC0 /* SingleEntityModel.xcdatamodel */;
+			path = SingleEntityModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2F54B8E21A00ED030061D453 /* Project object */;
+}

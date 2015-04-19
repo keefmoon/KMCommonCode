@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "id": "topLevel1",
+      "name": "Top Level 1",
+      "oneToOne": {
+        "id": "oneToOne1",
+        "name": "One To One 1",
+        "secondLevel": {
+          "id": "secondLevel1",
+          "name": "Second Level 1"
+        }
+      },
+      "oneToMany": {
+        "id": "oneToMany1",
+        "name": "One To Many 1"
+      },
+      "manyToOne": [
+        {
+          "id": "manyToOne1",
+          "name": "Many To One 1"
+        },
+        {
+          "id": "manyToOne2",
+          "name": "Many To One 2"
+        }
+      ],
+      "manyToMany": [
+        {
+          "id": "manyToMany1",
+          "name": "Many To Many 1"
+        },
+        {
+          "id": "manyToMany2",
+          "name": "Many To Many 2"
+        }
+      ]
+    }
+  ]
+}

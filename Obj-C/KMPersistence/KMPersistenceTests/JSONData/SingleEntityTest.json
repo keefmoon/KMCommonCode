@@ -1,0 +1,58 @@
+{
+  "results": [
+    {
+      "boolProperty": true,
+      "dateFormatProperty": "2014-10-12T12:34:56Z",
+      "decimalProperty": 12.345,
+      "doubleProperty": 23.456,
+      "floatProperty": 34.567,
+      "int16Property": 123,
+      "int32Property": 12345678,
+      "int64Property": 1234567890,
+      "stringProperty": "This is a string",
+      "dataProperty": "String that will be turned into data",
+      "transformableProperty": {
+        "custom2": 10,
+        "custom1": "String"
+      },
+      "uniqueProperty": "a1"
+    },
+    {
+      "boolProperty": {
+        "custom2": 10,
+        "custom1": "String"
+      },
+      "dateFormatProperty": "This is not a date",
+      "decimalProperty": "This is not a decimal",
+      "doubleProperty": "This is not a double",
+      "floatProperty": "This is not a float",
+      "int16Property": "This is not an int16",
+      "int32Property": "This is not an int32",
+      "int64Property": "This is not an int64",
+      "stringProperty": true,
+      "dataProperty": null,
+      "transformableProperty": true,
+      "uniqueProperty": "a2"
+    },
+    {
+      "stringProperty": "I've changed this string",
+      "uniqueProperty": "a1"
+    },
+    {
+      "boolProperty": true,
+      "dateFormatProperty": "2014-10-12T12:34:56Z",
+      "decimalProperty": 12.345,
+      "doubleProperty": 23.456,
+      "floatProperty": 34.567,
+      "int16Property": 123,
+      "int32Property": 12345678,
+      "int64Property": 1234567890,
+      "stringProperty": "There is no unique property",
+      "dataProperty": "String that will be turned into data",
+      "transformableProperty": {
+        "custom2": 10,
+        "custom1": "String"
+      },
+    }
+  ]
+}
