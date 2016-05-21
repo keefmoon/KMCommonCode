@@ -184,6 +184,8 @@
 		2F1FEEAA1A6C805B00938950 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Keith Moon";
 				TargetAttributes = {
@@ -444,6 +446,7 @@
 				2F1FEECB1A6C805B00938950 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F1FEECC1A6C805B00938950 /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +455,7 @@
 				2F1FEECE1A6C805B00938950 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

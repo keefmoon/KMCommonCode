@@ -10,8 +10,9 @@
 #import "NSManagedObjectContext+KMPFetchOrInsert.h"
 #import "KMPErrorDefines.h"
 #import "KMPDateFormatter.h"
+#import <KMCore/KMCore.h>
 
-const struct TPUserInfoKey TPUserInfoKey = {
+const struct KMPUserInfoKey KMPUserInfoKey = {
     .jsonKey = @"jsonKey",
     .uniqueAttribute = @"uniqueAttribute",
     .prefixParentUnique = @"prefixParentUnique",
@@ -20,15 +21,15 @@ const struct TPUserInfoKey TPUserInfoKey = {
     .dateFormat = @"dateFormat",
 };
 
-const struct TPUserInfoModifier TPUserInfoModifier = {
+const struct KMPUserInfoModifier KMPUserInfoModifier = {
     .hash = @"HASH",
 };
 
-const struct TPUserInfoAutoValue TPUserInfoAutoValue = {
+const struct KMPUserInfoAutoValue KMPUserInfoAutoValue = {
     .now = @"now",
 };
 
-@implementation NSManagedObject (KMPMapping)
+@implementation NSManagedObject (Mapping)
 
 #pragma mark - Mapping Methods
 
@@ -43,8 +44,8 @@ const struct TPUserInfoAutoValue TPUserInfoAutoValue = {
     
     for (NSAttributeDescription *attribute in self.entity.attributesByName.allValues) {
         
-        NSString *jsonKey = attribute.userInfo[TPUserInfoKey.jsonKey];
-        NSString *autoValue = attribute.userInfo[TPUserInfoKey.autoValue];
+        NSString *jsonKey = attribute.userInfo[KMPUserInfoKey.jsonKey];
+        NSString *autoValue = attribute.userInfo[KMPUserInfoKey.autoValue];
         NSString *modifier;
         
         // Check for modifier
@@ -62,7 +63,7 @@ const struct TPUserInfoAutoValue TPUserInfoAutoValue = {
         
         // Map attributes with jsonKey, but where the Parent Unique isn't set,
         // as parent unique ones will have already been set and we don't want to overwrite
-        if (jsonKey && !attribute.userInfo[TPUserInfoKey.prefixParentUnique]) {
+        if (jsonKey && !attribute.userInfo[KMPUserInfoKey.prefixParentUnique]) {
             
             id valueObject = responseDictionary;
             
@@ -98,11 +99,11 @@ const struct TPUserInfoAutoValue TPUserInfoAutoValue = {
     
     for (NSRelationshipDescription *relationship in self.entity.relationshipsByName.allValues) {
         
-        NSString *jsonKey = relationship.userInfo[TPUserInfoKey.jsonKey];
+        NSString *jsonKey = relationship.userInfo[KMPUserInfoKey.jsonKey];
         
         // Map attributes with jsonKey, but where the Parent Unique isn't set,
         // as parent unique ones will have already been set and we don't want to overwrite
-        if (jsonKey && !relationship.userInfo[TPUserInfoKey.prefixParentUnique]) {
+        if (jsonKey && !relationship.userInfo[KMPUserInfoKey.prefixParentUnique]) {
             
             if (relationship.isToMany) {
                 
@@ -170,13 +171,13 @@ const struct TPUserInfoAutoValue TPUserInfoAutoValue = {
                           toEntity:(NSEntityDescription *)entityDescription {
     
     
-    NSString *uniqueAttributeName = entityDescription.userInfo[TPUserInfoKey.uniqueAttribute];
+    NSString *uniqueAttributeName = entityDescription.userInfo[KMPUserInfoKey.uniqueAttribute];
     
     if (uniqueAttributeName && entityDictionary) {
         
         // Get JSON Key for Unique Attribute
         NSPropertyDescription *uniqueProperty = entityDescription.propertiesByName[uniqueAttributeName];
-        NSString *propertiesJSONKey = uniqueProperty.userInfo[TPUserInfoKey.jsonKey];
+        NSString *propertiesJSONKey = uniqueProperty.userInfo[KMPUserInfoKey.jsonKey];
         
         id valueObject = entityDictionary;
         
@@ -187,9 +188,9 @@ const struct TPUserInfoAutoValue TPUserInfoAutoValue = {
         }
         
         // Prefix with this entities uniqueValue, in case childs value is only unique within the parent
-        if (uniqueProperty.userInfo[TPUserInfoKey.prefixParentUnique]) {
+        if (uniqueProperty.userInfo[KMPUserInfoKey.prefixParentUnique]) {
             
-            NSString *thisEntityValue = [self valueForKey:self.entity.userInfo[TPUserInfoKey.uniqueAttribute]];
+            NSString *thisEntityValue = [self valueForKey:self.entity.userInfo[KMPUserInfoKey.uniqueAttribute]];
             valueObject = [NSString stringWithFormat:@"%@/%@", thisEntityValue, valueObject];
             
         }
@@ -197,8 +198,8 @@ const struct TPUserInfoAutoValue TPUserInfoAutoValue = {
         NSString *uniqueValue = valueObject;
         
         NSManagedObject *relatedManagedObject = [self.managedObjectContext fetchOrInsertObjectWithClassName:entityDescription.managedObjectClassName
-                                                                                      forUniqueAttribute:uniqueAttributeName
-                                                                                               withValue:uniqueValue];
+                                                                                         forUniqueAttribute:uniqueAttributeName
+                                                                                                  withValue:uniqueValue];
         
         NSError *mappingError;
         [relatedManagedObject mapResponseDictionary:entityDictionary withError:&mappingError];
@@ -207,7 +208,7 @@ const struct TPUserInfoAutoValue TPUserInfoAutoValue = {
         
     } else if (!uniqueAttributeName) {
         
-        NSLog(@"NOTE: %@ has no %@", entityDescription.name, TPUserInfoKey.uniqueAttribute);
+        NSLog(@"NOTE: %@ has no %@", entityDescription.name, KMPUserInfoKey.uniqueAttribute);
         
         NSManagedObject *relatedManagedObject = [[NSManagedObject alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:self.managedObjectContext];
         
@@ -263,141 +264,150 @@ const struct TPUserInfoAutoValue TPUserInfoAutoValue = {
         return [self errorForMappingKey:attribute.name andValue:responseObject];
     }
     
-    // Dates arrive in the JSON as numbers or strings
-    if (attribute.attributeType == NSDateAttributeType) {
-        if ([responseObject isKindOfClass:[NSNumber class]]) {
-            responseObject = [NSDate dateWithTimeIntervalSince1970:[responseObject unsignedLongLongValue]];
+    switch (attribute.attributeType) {
+        case NSInteger16AttributeType:
+        case NSInteger32AttributeType:
+        case NSInteger64AttributeType:
             
-            // Check again for equality
-            if ([currentValue isEqual:responseObject]) {
-                return nil;
+            if ([responseObject isKindOfClass:[NSNumber class]]) {
+                [self setValue:responseObject forKey:attribute.name];
+            } else if ([responseObject isKindOfClass:[NSString class]]) {
+                NSString *stringObject = (NSString *)responseObject;
+                NSNumber *numberObject = @([stringObject integerValue]);
+                [self setValue:numberObject forKey:attribute.name];
+            } else {
+                mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
+                DLog(@"Trying to save to a number attribute of %@ a non-NSNumber: %@", attribute, responseObject);
             }
-        } else if ([responseObject isKindOfClass:[NSString class]]) {
+            break;
             
-            // Convert from NSString to NSDate using dateformat in UserInfo
-            NSString *dateFormat = attribute.userInfo[TPUserInfoKey.dateFormat];
+        case NSDecimalAttributeType:
             
-            if (dateFormat) {
+            if ([responseObject isKindOfClass:[NSNumber class]]) {
+                [self setValue:responseObject forKey:attribute.name];
+            } else if ([responseObject isKindOfClass:[NSString class]]) {
+                NSString *stringObject = (NSString *)responseObject;
+                NSDecimalNumber *numberObject = [NSDecimalNumber decimalNumberWithString:stringObject];
+                [self setValue:numberObject forKey:attribute.name];
+            } else {
+                mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
+                DLog(@"Trying to save to a number attribute of %@ a non-NSNumber: %@", attribute, responseObject);
+            }
+            break;
+            
+        case NSDoubleAttributeType:
+            
+            if ([responseObject isKindOfClass:[NSNumber class]]) {
+                [self setValue:responseObject forKey:attribute.name];
+            } else if ([responseObject isKindOfClass:[NSString class]]) {
+                NSString *stringObject = (NSString *)responseObject;
+                NSNumber *numberObject = @([stringObject doubleValue]);
+                [self setValue:numberObject forKey:attribute.name];
+            } else {
+                mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
+                DLog(@"Trying to save to a number attribute of %@ a non-NSNumber: %@", attribute, responseObject);
+            }
+            break;
+            
+        case NSFloatAttributeType:
+            
+            if ([responseObject isKindOfClass:[NSNumber class]]) {
+                [self setValue:responseObject forKey:attribute.name];
+            } else if ([responseObject isKindOfClass:[NSString class]]) {
+                NSString *stringObject = (NSString *)responseObject;
+                NSNumber *numberObject = @([stringObject floatValue]);
+                [self setValue:numberObject forKey:attribute.name];
+            } else {
+                mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
+                DLog(@"Trying to save to a number attribute of %@ a non-NSNumber: %@", attribute, responseObject);
+            }
+            break;
+            
+        case NSBooleanAttributeType:
+            
+            if ([responseObject isKindOfClass:[NSNumber class]]) {
+                [self setValue:responseObject forKey:attribute.name];
+            } else if ([responseObject isKindOfClass:[NSString class]]) {
+                NSString *stringObject = (NSString *)responseObject;
+                NSNumber *numberObject = @([stringObject boolValue]);
+                [self setValue:numberObject forKey:attribute.name];
+            } else {
+                mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
+                DLog(@"Trying to save to a number attribute of %@ a non-NSNumber: %@", attribute, responseObject);
+            }
+            break;
+            
+        case NSStringAttributeType:
+            
+            if ([responseObject isKindOfClass:[NSString class]]) {
+                [self setValue:responseObject forKey:attribute.name];
+            } else {
+                mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
+                DLog(@"Trying to save to a string attribute of %@ a non-NSString: %@", attribute, responseObject);
+            }
+            break;
+            
+        case NSBinaryDataAttributeType:
+            
+            if ([responseObject isKindOfClass:[NSData class]]) {
+                [self setValue:responseObject forKey:attribute.name];
+            } else if ([responseObject respondsToSelector:@selector(dataUsingEncoding:)]) {
+                responseObject = [responseObject dataUsingEncoding:NSUTF8StringEncoding];
+                [self setValue:responseObject forKey:attribute.name];
+            } else {
+                mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
+                DLog(@"Trying to save to a binary data attribute of %@ a non-NSData: %@", attribute, responseObject);
+            }
+            break;
+            
+        case NSDateAttributeType:
+            
+            if ([responseObject isKindOfClass:[NSNumber class]]) {
+                responseObject = [NSDate dateWithTimeIntervalSince1970:[responseObject unsignedLongLongValue]];
                 
-                KMPDateFormatter *dateFormatter = [KMPDateFormatter sharedFormatter];
-                dateFormatter.dateFormat = dateFormat;
-                NSDate *dateValue = [dateFormatter dateFromString:responseObject];
-                if (dateValue) {
-                    responseObject = dateValue;
+                // Check again for equality
+                if ([currentValue isEqual:responseObject]) {
+                    return nil;
+                } else {
+                    [self setValue:responseObject forKey:attribute.name];
+                }
+            } else if ([responseObject isKindOfClass:[NSString class]]) {
+                
+                // Convert from NSString to NSDate using dateformat in UserInfo
+                NSString *dateFormat = attribute.userInfo[KMPUserInfoKey.dateFormat];
+                
+                if (dateFormat) {
+                    
+                    KMPDateFormatter *dateFormatter = [KMPDateFormatter sharedFormatter];
+                    dateFormatter.dateFormat = dateFormat;
+                    NSDate *dateValue = [dateFormatter dateFromString:responseObject];
+                    if (dateValue) {
+                        responseObject = dateValue;
+                        [self setValue:responseObject forKey:attribute.name];
+                    }
                 }
             }
-        }
+            break;
+            
+        case NSUndefinedAttributeType:
+        case NSTransformableAttributeType:
+        case NSObjectIDAttributeType:
+            mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
+            DLog(@"Trying to save to a unknown attribute type of %@ a response object: %@", attribute, responseObject);
+            break;
     }
-    // Convert JSON entry into NSData for binary type
-    else if (attribute.attributeType == NSBinaryDataAttributeType && [responseObject respondsToSelector:@selector(dataUsingEncoding:)]) {
-        responseObject = [responseObject dataUsingEncoding:NSUTF8StringEncoding];
-    }
-    
-    // Let the framework try to coerce the value
-    @try {
-        [self setValue:responseObject forKey:attribute.name];
-    }
-    @catch (NSException* ex) {
-        mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
-        [ex description];
-        NSLog(@"Failed to map response object: %@ for attribute: %@. Exception is %@", responseObject, attribute, ex);
-    }
-    /*
-     switch (attribute.attributeType) {
-     case NSInteger16AttributeType:
-     case NSInteger32AttributeType:
-     case NSInteger64AttributeType:
-     case NSDecimalAttributeType:
-     case NSDoubleAttributeType:
-     case NSFloatAttributeType:
-     case NSBooleanAttributeType:
-     
-     if ([responseObject isKindOfClass:[NSNumber class]]) {
-     [self setValue:responseObject forKey:attribute.name];
-     } else {
-     mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
-     BNCLog(BNCLogTypeCoreData, [NSThread currentThread].description,
-     @"Trying to save to a number attribute of %@ a non-NSNumber: %@", attribute, responseObject);
-     }
-     break;
-     
-     case NSStringAttributeType:
-     
-     if ([responseObject isKindOfClass:[NSString class]]) {
-     [self setValue:responseObject forKey:attribute.name];
-     } else {
-     mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
-     BNCLog(BNCLogTypeCoreData, [NSThread currentThread].description,
-     @"Trying to save to a string attribute of %@ a non-NSString: %@", attribute, responseObject);
-     }
-     break;
-     
-     case NSBinaryDataAttributeType:
-     
-     if ([responseObject isKindOfClass:[NSData class]]) {
-     [self setValue:responseObject forKey:attribute.name];
-     } else {
-     mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
-     BNCLog(BNCLogTypeCoreData, [NSThread currentThread].description,
-     @"Trying to save to a binary data attribute of %@ a non-NSData: %@", attribute, responseObject);
-     }
-     break;
-     
-     case NSDateAttributeType:
-     
-     if ([responseObject isKindOfClass:[NSDate class]]) {
-     [self setValue:responseObject forKey:attribute.name];
-     
-     } else if ([responseObject isKindOfClass:[NSString class]]) {
-     
-     // Convert from NSString to NSDate using dateformat in UserInfo
-     NSString *dateFormat = self.entity.userInfo[userInfoDateFormat];
-     
-     if (dateFormat) {
-					
-					NSDate *dateValue = [[NSDate managedObjectDateFormatterWithFormat:dateFormat] dateFromString:responseObject];
-					[self setValue:dateValue forKey:attribute.name];
-					
-     } else {
-					
-					mappingError = [NSError errorWithDomain:BNErrorDomainCoreData
-     code:BNErrorCodeNoDateFormat
-     userInfo:@{BNErrorUserInfoKeyMappingKey : attribute.name,
-     BNErrorUserInfoKeyMappingValue : responseObject}];
-					BNCLog(BNCLogTypeCoreData, [NSThread currentThread].description,
-     @"No Date Format when trying to save to a date attribute of %@ the value: %@", attribute, responseObject);
-     }
-     
-     } else if ([responseObject isKindOfClass:[NSNumber class]]) {
-     
-     // Convert from NSNumber to NSDate using timeIntervalSince1970
-     NSDate *dateValue = [NSDate dateFromTimestamp:responseObject];
-     [self setValue:dateValue forKey:attribute.name];
-     
-     } else {
-     mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
-     BNCLog(BNCLogTypeCoreData, [NSThread currentThread].description,
-     @"Trying to save to a date attribute of %@ a non-NSDate: %@", attribute, responseObject);
-     }
-     break;
-     
-     default:
-     mappingError = [self errorForMappingKey:attribute.name andValue:responseObject];
-     BNCLog(BNCLogTypeCoreData, [NSThread currentThread].description,
-     @"Trying to save to a unknown attribute type of %@ a response object: %@", attribute, responseObject);
-     }*/
     
     return mappingError;
 }
 
 - (NSDictionary *)autoValues {
     
-    return @{TPUserInfoAutoValue.now : [NSDate date]};
+    return @{KMPUserInfoAutoValue.now : [NSDate date]};
 }
 
 - (id)applyModifier:(NSString *)modifier toValue:(id)value {
     
-    if ([modifier isEqualToString:TPUserInfoModifier.hash]) {
+    if ([modifier isEqualToString:KMPUserInfoModifier.hash]) {
         value = @([value hash]);
     }
     return value;

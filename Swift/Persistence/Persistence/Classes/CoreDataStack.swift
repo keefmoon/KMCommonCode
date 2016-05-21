@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc
+
 public class CoreDataStack {
     
     private let modelURL, storeURL : NSURL
@@ -48,7 +48,13 @@ public class CoreDataStack {
         if !sqlFileAlreadyExists {
             if let bundleSQLPath = self.existingStoreURL {
                 var copyError: NSError? = nil
-                NSFileManager.defaultManager().copyItemAtURL(bundleSQLPath, toURL: self.storeURL, error: &copyError)
+                do {
+                    try NSFileManager.defaultManager().copyItemAtURL(bundleSQLPath, toURL: self.storeURL)
+                } catch var error as NSError {
+                    copyError = error
+                } catch {
+                    fatalError()
+                }
                 if let checkError = copyError {
                     NSLog("Copy error: \(checkError), \(checkError.userInfo)")
                 }
@@ -57,7 +63,10 @@ public class CoreDataStack {
         
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
-        if coordinator!.addPersistentStoreWithType(self.storeType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        do {
+            try coordinator!.addPersistentStoreWithType(self.storeType, configuration: nil, URL: url, options: nil)
+        } catch var error1 as NSError {
+            error = error1
             coordinator = nil
             // Report any error we got.
             let dict = NSMutableDictionary()
@@ -69,6 +78,8 @@ public class CoreDataStack {
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(error), \(error!.userInfo)")
             abort()
+        } catch {
+            fatalError()
         }
         
         return coordinator
@@ -87,7 +98,7 @@ public class CoreDataStack {
         NSNotificationCenter.defaultCenter().addObserverForName(NSManagedObjectContextDidSaveNotification,
             object: self.backendContext,
             queue: NSOperationQueue.mainQueue(),
-            usingBlock: { (notification: NSNotification!) -> Void in
+            usingBlock: { (notification: NSNotification) -> Void in
             
             managedObjectContext.performBlock({ () -> Void in
                 managedObjectContext.mergeChangesFromContextDidSaveNotification(notification)
@@ -113,11 +124,16 @@ public class CoreDataStack {
     func saveContext () {
         if let moc = self.backendContext {
             var error: NSError? = nil
-            if moc.hasChanges && !moc.save(&error) {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                NSLog("Unresolved error \(error), \(error!.userInfo)")
-                abort()
+            if moc.hasChanges {
+                do {
+                    try moc.save()
+                } catch let error1 as NSError {
+                    error = error1
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    NSLog("Unresolved error \(error), \(error!.userInfo)")
+                    abort()
+                }
             }
         }
     }

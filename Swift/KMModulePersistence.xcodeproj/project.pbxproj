@@ -192,6 +192,7 @@
 		2F0C28011A52279900B5CF71 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Data Ninjitsu";
 				TargetAttributes = {

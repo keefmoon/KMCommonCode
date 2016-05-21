@@ -17,7 +17,6 @@
 				2F089BF41A104D0B006A2EC0 /* PBXTargetDependency */,
 				2F089BF61A104D19006A2EC0 /* PBXTargetDependency */,
 				2F089BF81A104D1F006A2EC0 /* PBXTargetDependency */,
-				2F089BFA1A104D25006A2EC0 /* PBXTargetDependency */,
 			);
 			name = "KMCommonCode Frameworks";
 			productName = "KMCommonCode Frameworks";
@@ -145,13 +144,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2F54B92E1A00F5FE0061D453;
 			remoteInfo = "KMPersistence Framework";
-		};
-		2F089BF91A104D25006A2EC0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2F089BD31A104CD8006A2EC0 /* KMParseSync.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2F089B621A104893006A2EC0;
-			remoteInfo = "KMParseSync Framework";
 		};
 		2F089BFF1A104DCC006A2EC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -676,11 +668,6 @@
 			isa = PBXTargetDependency;
 			name = "KMPersistence Framework";
 			targetProxy = 2F089BF71A104D1F006A2EC0 /* PBXContainerItemProxy */;
-		};
-		2F089BFA1A104D25006A2EC0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "KMParseSync Framework";
-			targetProxy = 2F089BF91A104D25006A2EC0 /* PBXContainerItemProxy */;
 		};
 		2F089C001A104DCC006A2EC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

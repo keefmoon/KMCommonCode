@@ -14,7 +14,13 @@ extension NSManagedObjectContext {
     public func resultsFromFetchRequest(request: NSFetchRequest) -> Array<AnyObject>? {
         
         var fetchError : NSError?
-        var results = self.executeFetchRequest(request, error: &fetchError)
+        var results: [AnyObject]?
+        do {
+            results = try self.executeFetchRequest(request)
+        } catch let error as NSError {
+            fetchError = error
+            results = nil
+        }
         
         if let error = fetchError {
             NSLog("Fetching Error: \(error.description)")

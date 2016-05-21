@@ -22,14 +22,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2F089B3D1A103E2A006A2EC0 /* KMCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089B3C1A103E2A006A2EC0 /* KMCore.h */; };
 		2F089B3F1A103E2A006A2EC0 /* KMCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089B3E1A103E2A006A2EC0 /* KMCore.m */; };
 		2F089B451A103E2A006A2EC0 /* libKMCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089B391A103E2A006A2EC0 /* libKMCore.a */; };
 		2F089B6C1A104922006A2EC0 /* KMCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F089B3C1A103E2A006A2EC0 /* KMCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F089C291A105142006A2EC0 /* KMCConcurrentOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F089C271A105142006A2EC0 /* KMCConcurrentOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F089C2A1A105142006A2EC0 /* KMCConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089C281A105142006A2EC0 /* KMCConcurrentOperation.m */; };
-		2F089C2B1A1051F5006A2EC0 /* KMCConcurrentOperation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089C271A105142006A2EC0 /* KMCConcurrentOperation.h */; };
-		2F1D52A81A32922200FC3BAD /* UIView+IBInspectables.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F1D52A61A32922200FC3BAD /* UIView+IBInspectables.h */; };
+		2F1D52A81A32922200FC3BAD /* UIView+IBInspectables.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F1D52A61A32922200FC3BAD /* UIView+IBInspectables.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F1D52A91A32922200FC3BAD /* UIView+IBInspectables.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1D52A71A32922200FC3BAD /* UIView+IBInspectables.m */; };
 		2F1D52DB1A3293A500FC3BAD /* KMModuleCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1D52D01A3293A500FC3BAD /* KMModuleCore.framework */; };
 /* End PBXBuildFile section */
@@ -65,8 +63,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				2F089C2B1A1051F5006A2EC0 /* KMCConcurrentOperation.h in CopyFiles */,
-				2F089B3D1A103E2A006A2EC0 /* KMCore.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

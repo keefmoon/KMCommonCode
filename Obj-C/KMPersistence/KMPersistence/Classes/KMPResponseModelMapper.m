@@ -62,12 +62,12 @@
     }
 
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
-    NSString *uniqueAttributeName = entity.userInfo[TPUserInfoKey.uniqueAttribute];
+    NSString *uniqueAttributeName = entity.userInfo[KMPUserInfoKey.uniqueAttribute];
     NSAttributeDescription *uniqueAttribute = entity.attributesByName[uniqueAttributeName];
-    NSString *uniqueAttributeKey = uniqueAttribute.userInfo[TPUserInfoKey.jsonKey];
+    NSString *uniqueAttributeKey = uniqueAttribute.userInfo[KMPUserInfoKey.jsonKey];
     
     if (!uniqueAttributeName && error != NULL) {
-        NSLog(@"%@ has no %@, therefore cannot be cascade mapped", entityName, TPUserInfoKey.uniqueAttribute);
+        NSLog(@"%@ has no %@, therefore cannot be cascade mapped", entityName, KMPUserInfoKey.uniqueAttribute);
         *error = [NSError errorWithDomain:KMPErrorDomain code:KMPErrorCodeNoUniqueAttribute userInfo:@{KMPErrorUserInfoKeyEntity : entity}];
         return @[];
     }

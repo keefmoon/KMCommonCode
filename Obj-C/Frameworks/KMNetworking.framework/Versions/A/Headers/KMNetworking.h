@@ -28,5 +28,8 @@
 + (instancetype)sharedManager;
 - (NSProgress *)enqueueRequestForURL:(NSURL *)url withBackgroundCompletionHandler:(KMNRequestCompletionHandler)completionHandler;
 - (NSProgress *)enqueueRequest:(NSURLRequest *)request withBackgroundCompletionHandler:(KMNRequestCompletionHandler)completionHandler;
+// Expect JSON response even if content-type is wrong
+- (void)enqueueJSONRequestForURL:(NSURL *)url withBackgroundCompletionHandler:(KMNRequestCompletionHandler)completionHandler;
+- (void)enqueueJSONRequest:(NSURLRequest *)request withBackgroundCompletionHandler:(KMNRequestCompletionHandler)completionHandler;
 
 @end

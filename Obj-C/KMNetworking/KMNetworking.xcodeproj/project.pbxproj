@@ -34,14 +34,7 @@
 		2F089A461A0FF87D006A2EC0 /* KMNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089A381A0FF87D006A2EC0 /* KMNetworking.m */; };
 		2F089A4E1A0FF90A006A2EC0 /* KMNRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089A4C1A0FF90A006A2EC0 /* KMNRequestTests.m */; };
 		2F089A531A0FF958006A2EC0 /* RelationshipTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F089A521A0FF958006A2EC0 /* RelationshipTest.json */; };
-		2F089A5E1A0FFAA5006A2EC0 /* KMNRequestCompletionHandler.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A341A0FF87D006A2EC0 /* KMNRequestCompletionHandler.h */; };
-		2F089A5F1A0FFAA5006A2EC0 /* KMNErrorDefines.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A331A0FF87D006A2EC0 /* KMNErrorDefines.h */; };
-		2F089A601A0FFAA5006A2EC0 /* KMNResponseDefines.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A2E1A0FF87D006A2EC0 /* KMNResponseDefines.h */; };
-		2F089A621A0FFAA5006A2EC0 /* KMNRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A2A1A0FF87D006A2EC0 /* KMNRequest.h */; };
-		2F089A631A0FFAA5006A2EC0 /* KMNResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A2C1A0FF87D006A2EC0 /* KMNResponse.h */; };
-		2F089A641A0FFAA5006A2EC0 /* KMNetworking.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A371A0FF87D006A2EC0 /* KMNetworking.h */; };
 		2F089A661A100712006A2EC0 /* KMNStaticDataTestingProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F089A501A0FF94A006A2EC0 /* KMNStaticDataTestingProtocol.m */; };
-		2F089A671A100727006A2EC0 /* KMNStaticDataTestingProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2F089A4F1A0FF94A006A2EC0 /* KMNStaticDataTestingProtocol.h */; };
 		2F089A681A10073D006A2EC0 /* KMNStaticDataTestingProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F089A4F1A0FF94A006A2EC0 /* KMNStaticDataTestingProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F089C251A1050CD006A2EC0 /* KMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F089C241A1050CD006A2EC0 /* KMCore.framework */; };
 		2F1830AA1A03E6CF007522E8 /* libKMNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F18309E1A03E6CF007522E8 /* libKMNetworking.a */; };
@@ -71,13 +64,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				2F089A671A100727006A2EC0 /* KMNStaticDataTestingProtocol.h in CopyFiles */,
-				2F089A5E1A0FFAA5006A2EC0 /* KMNRequestCompletionHandler.h in CopyFiles */,
-				2F089A5F1A0FFAA5006A2EC0 /* KMNErrorDefines.h in CopyFiles */,
-				2F089A601A0FFAA5006A2EC0 /* KMNResponseDefines.h in CopyFiles */,
-				2F089A621A0FFAA5006A2EC0 /* KMNRequest.h in CopyFiles */,
-				2F089A631A0FFAA5006A2EC0 /* KMNResponse.h in CopyFiles */,
-				2F089A641A0FFAA5006A2EC0 /* KMNetworking.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

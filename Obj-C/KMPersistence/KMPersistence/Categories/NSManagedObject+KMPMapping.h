@@ -10,22 +10,22 @@
 
 #pragma mark - User Info Keys and Values
 
-extern const struct TPUserInfoKey {
+extern const struct KMPUserInfoKey {
     __unsafe_unretained NSString *jsonKey;
     __unsafe_unretained NSString *uniqueAttribute;
     __unsafe_unretained NSString *prefixParentUnique;
     __unsafe_unretained NSString *apiPathFormat;
     __unsafe_unretained NSString *autoValue;
     __unsafe_unretained NSString *dateFormat;
-} TPUserInfoKey;
+} KMPUserInfoKey;
 
-extern const struct TPUserInfoModifier {
+extern const struct KMPUserInfoModifier {
     __unsafe_unretained NSString *hash;
-} TPUserInfoModifier;
+} KMPUserInfoModifier;
 
-extern const struct TPUserInfoAutoValue {
+extern const struct KMPUserInfoAutoValue {
     __unsafe_unretained NSString *now;
-} TPUserInfoAutoValue;
+} KMPUserInfoAutoValue;
 
 @interface NSManagedObject (KMPMapping)
 
